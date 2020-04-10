@@ -1,0 +1,583 @@
+body{
+    margin:0px;
+        background-color:aliceblue;
+}
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+.container{
+    max-width: 1140px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    position: absolute;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid black;
+    padding: 0px 50px;
+    z-index:10;
+}
+header .brandname{
+    font-weight:300px;
+    font-size: 20px;
+    color:black;
+    text-transform: uppercase;
+    position: relative;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .navside ul { 
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+header .navside ul li{
+    display: inline-block;
+    margin-left:35px;
+}
+
+header .navside ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 50px;
+    color: black;
+    position: relative;
+    display: block;
+}
+header .navside ul li a:hover{
+    color:blue;
+}
+header .navside ul li a:active{
+    color: red;
+}
+header .navside ul li a::before{
+    content:" ";
+    background-color:white;
+    width:0%;
+    height: 3px;
+    position:absolute;
+    right:0px;
+    bottom:-1px;
+    transition: all .5s ease;
+}
+header .navside ul li a:hover::before{
+    width: 100%;
+    left:0px;
+}
+header .navside ul li a.active::before{
+    width: 100%;
+    left:0px;
+}
+.home{
+    min-height:100vh;
+    width: 100vw;
+    background-image: url("portfolio 2.jfif");
+    background-size: cover;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    background-position: center;
+}
+.home  .full-screen {
+    min-height: 100vh;
+  
+}
+.home .home-content{
+    flex: 0 0 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    
+}
+.home .home-content .block{
+    position: absolute;
+    top:300px;
+    width: 390px;
+    max-width: 80vh;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.home .home-content .block #h1{
+    color: white;
+    padding-bottom: 12px;
+    margin-left: 35px;
+    font-size: 20px;
+    }
+.home .home-content .block #h3{
+color: white;
+font-size:40px;
+margin: 0px;
+padding: 0px;
+}
+.home .home-content .block h2{
+margin: 0px;
+color: white;
+padding: 0px;
+margin-left: -8px;
+font-size: 20px;
+}
+.txt-type >.txt{
+    border-right:0.1rem solid black;
+}
+/* how to display on pc*/
+@media(min-width:1000px){
+.home .home-content .block #h1{
+        color: white;
+        padding-bottom: 12px;
+        margin-left: 35px;
+        }
+.home .home-content .block #h3{
+    color: white;
+    font-size:60px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 4px;    
+    }
+.home .home-content .block h2{
+    margin: 0px;
+    color: white;
+    padding: 0px;
+    margin-left: -8px;
+    }
+.home .home-content .block{
+        position: absolute;
+        top:300px;
+        max-width: 70vh;
+        border-left: 4px solid;
+        border-right: 4px solid ;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+ header .brandname{
+        font-weight:600px;
+        font-size: 40px;
+        color:black;
+        text-transform: uppercase;
+        position: relative;
+    }
+header .navside ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 100px;
+    color: black;
+    position: relative;
+    display: block;
+}
+}
+/*ABOUT */
+.about,#sevice{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about,#about-me{
+    margin:1.5%;
+    color: red;
+    font-size: 28px;
+    font-style: oblique;
+    font-weight:40px;
+}
+.about,.folder-1{
+    display:flex;
+    flex:wrap;
+    margin-left:1.5%;
+}
+.flex-item-1{
+    color:white;
+    font-size:1.5rem;
+    padding:1rem ;
+    height: 400px;
+   
+}
+.image{
+    background-image: url(IMG_20190331_112001_0.jpg);
+    background-size: cover;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    background-position: center;
+    width: 400px;
+}
+.write-up{
+    width: 900px;
+}
+.text{
+    color: black;
+}
+.text-1{
+    color: rgb(157, 143, 143);;
+    font-family:'Courier New', Courier, monospace;
+}
+.bio{
+    display: flex;
+    flex-wrap: wrap;
+    max-height:900px;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top:20px;
+    padding: 23px;
+    margin-left: 0px;
+   
+}
+.flex-item-1a{
+    color:white;
+    font-size:1.5rem;
+    margin-left: 0px;
+    text-align:center;
+}
+.write-up-1{
+    max-width:400px;
+}
+.write-up-1 #social-media{
+ margin-top: 10px;
+}
+.write-up-1 #social-media ul li a{
+    text-decoration: none;
+   
+}
+.write-up-1 #social-media ul li {
+    display: inline;
+    margin-left: 10px;
+}
+.write-up-2{
+    max-width:400px;
+}
+.about, .folder-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 700px;
+}
+.flex-item-2{
+    color:white;
+    font-size:1.5rem;
+    padding:1rem ;
+    text-align:center;
+    margin-top: 20px;
+    width: 350px;
+    max-width: 400px;
+    max-height: 400px;
+}
+.item-1{
+    background-color: blue;
+    background-image: url("protifolio 1.jpg");
+    background-size: cover;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    background-position: center;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.item-2{
+    background-color:red;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}     
+.item-3{
+    background-color:green;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.item-4{
+    background-color:purple;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/*for email in larger screen*/
+#section-3{
+    margin-top: 50px;
+}
+#message{
+    height: 30vh;
+    border:1px solid black;
+    width: 445px;
+    margin-left: 35vw;
+}
+#message h3{
+    font-weight: 12px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-left-radius:4px solid black;
+    border-bottom-right-radius: 4px solid black;
+}
+#section-3 #message #message-1{
+    height: 60px;
+}
+#section-3 #message .input-1, #message-1{
+    width: 300px;
+}
+#section-3 #message form{
+    text-align: center;
+    background-color: white;
+    width: 350px;
+    margin: 50px;
+    margin-top: -1px;
+}
+/* for footer in large screen*/
+.foot{
+    max-width: 100vw;
+    height: 220px;
+    background-color: gray;
+    margin-top: 20px;
+}
+.foot #foot-1{
+    margin-top: 15px;
+    height: 105px; 
+    text-align: center;
+    font-weight:600px;
+    font-size: 40px;
+}
+.foot #foot-2{
+    margin-top: 12px;
+    height: 45px}
+.foot #foot-3{
+margin-top: 10px;
+height: 34px;
+text-align: center;
+}
+.foot #foot-2 ul{
+    text-align: center;
+}
+.foot #foot-2 ul li{
+    display: inline;
+    margin: 2px;
+    margin-left: 10px;
+}
+.foot #foot-2 ul li a{
+    text-decoration: none;
+}
+.foot #foot-2 ul li .fa{
+    font-size: 25px;
+    font-weight: 30px;
+}
+/* position of side bar on phone*/
+@media(max-width:800px){
+*{ padding:0px;
+    margin:0px;
+}
+header{
+    position: fixed;
+    width: 120px;
+    background-color:black;
+    height: 1340px;
+    margin: 0px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius:12px;
+    left: -120px;
+    transition: all 300ms linear ;
+}
+#header.active{
+    left: 0px;
+}
+header .navside{
+    margin-top: 0px;
+    
+}
+header .navside ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 50px;
+    color: blue;
+    display:block;
+    padding: 15px;
+    border-bottom: 2px solid whitesmoke;
+    border-bottom-left-radius: 9px;
+   
+}
+header .navside ul li{
+    display: inline-block;
+    margin-left:-45px;
+}
+header .navside ul li a::before{
+    content:" ";
+    background-color:black;
+    width:0%;
+    height: 3px;
+    position:absolute;
+    right:0px;
+    bottom:-1px;
+    transition: all .5s ease;
+}
+header .navside ul li a.active::before{
+    width: 100%;
+    left:0px;
+    background-color: black;
+}
+header .navside .toggle-button{
+    position: absolute;
+    left:130px;
+    top:15px
+}
+header .navside .toggle-button span{
+    display:block;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin-top:5px;
+}
+
+header .brandname{
+    font-weight:300px;
+    font-size: 20px;
+    color:black;
+    text-transform: uppercase;
+    position: absolute;
+    left: 250px;
+    top:2px;
+    width: 100px;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 4px solid black;
+    border-bottom-right-radius: 4px solid black;
+    position: fixed;  
+}
+#message{
+    height: 37vh;
+    border:1px solid black;
+    width: 310px;
+    margin: 12px;
+}
+#section-3 #message form{
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    margin: 1px;
+    margin-top:0px;
+    padding: 15px;
+}
+#section-3 #message .input-1, #message-1{
+    width: 250px;
+}
+.foot{
+    max-width: 100vw;
+    height: 0px;
+    margin-top: 20px;
+    border-top-left-radius: 2px solid black ;
+    border-top-right-radius: 2px solid black;
+    background-color: gray;
+}
+.foot #foot-1{
+    margin-top: 20px;
+    height: 105px; 
+    text-align: center;
+    font-weight:600px;
+    font-size: 40px;
+}
+.foot #foot-1{
+    margin-top: 20px;
+    height: 50px; 
+    text-align: center;
+    font-weight:300px;
+    font-size: 18px;
+}
+.foot #foot-2{
+    margin-top: 60px;
+    height: 35px;
+}
+.foot #foot-3{
+margin-top:15px;
+height: 34px;
+text-align: center;
+}
+}
+/* how to display about section on phone*/
+@media(max-width:1000px){
+    .about,.folder-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 540px;
+    height: 1099px;
+
+    
+    }
+    .flex-item-1{
+        color:white;
+        font-size:1.5rem;
+        padding:1rem ;
+
+           
+    }
+    .image{
+        background-image: url(IMG_20190331_112001_0.jpg);
+        background-size: cover;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        background-position: center;
+        position: relative;
+        left: -80px;
+        height: 250px;
+    }
+    .write-up{ 
+        height: 450px;
+        max-width: 1000px;
+        margin-top: -200px;
+    
+    }
+    .text{
+        color: black;
+        font-size: 16px;
+        font-weight: 16px;
+    }
+    .text-1{
+        color: rgb(157, 143, 143);;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 16px;
+        font-weight: 16px;
+    }
+    .flex-item-1a{
+        color:white;
+        font-size:1.5rem;
+        text-align:center;
+        margin-left: -15px;
+    }
+    .flex-item-1a p{
+        font-size: 16px;
+        font-weight: 16px;
+    }
+    .bio{
+        display: flex;
+        flex-wrap: wrap;
+        max-height:900px;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top:20px;
+        padding: 23px;
+        position: absolute;
+       
+    }
+    .about,#sevice{
+        margin-top: -300px;
+        font-size: 20px;
+        font-weight: 15px;
+    }
+    .about, .folder-2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+        height: 700px;
+        margin-top: -350x;
+    }
+    .foot{
+        max-width: 100vw;
+        height: 0px;
+        margin-top: 20px;
+        border-top-left-radius: 2px solid black ;
+        border-top-right-radius: 2px solid black;
+        background-color: gray;
+    }
+}
