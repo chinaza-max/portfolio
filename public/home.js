@@ -7,6 +7,7 @@ let icon2=document.getElementById("backend")
 scrollView.forEach(element => {
     element.addEventListener("click",move)
 })
+window.onscroll = function() {scrollFunction()}
 
 function move(){
 
@@ -24,7 +25,7 @@ function move(){
 
 
 let slideIndex=0;
-//let slider=document.querySelector(".slider")
+let slider=document.getElementById("section6__container__slides")
 let slides=document.getElementById("section6__container__slides")
 let slide=document.querySelectorAll(".section6__container__slides__class");
 let dots=document.querySelectorAll(".section6__container__dot span");
@@ -34,7 +35,6 @@ function plusslide(position){
       console.log(position)
     if(slideIndex>slide.length){
         slideIndex=1;
-        //console.log(slide.length)
     }
     else if(slideIndex<1){  
         slideIndex=slide.length
@@ -73,7 +73,7 @@ function currentslide(index){
 
 
 
-/*
+
 
 
 function showslide(){
@@ -113,6 +113,20 @@ slider.addEventListener("mouseout",()=>{
     interval=window.setInterval(()=>{
         showslide();
     },3000)
-})*/
+})
 
 
+//this handles navbar on desktop
+
+function scrollFunction() {
+        console.log(document.body.scrollTop)
+    if (document.body.scrollTop > 50 ||  document.documentElement.scrollTop > 50) {
+        document.getElementById("container__section1").style.boxShadow= "2px 1px rgb(218, 214, 214)"
+        document.getElementById("container__section1").style.backgroundColor="rgb(248, 248, 248)"
+
+    } 
+    else {
+        document.getElementById("container__section1").style.boxShadow= "none"
+        document.getElementById("container__section1").style.backgroundColor="transparent"
+    }
+}

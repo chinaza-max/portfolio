@@ -13,7 +13,7 @@
     <div id="container">
         <div id="container__section1">
             <nav id="container__section1__destopNav">
-                <a href="" id="logo">chinaza</a>
+                <div id="logo__container"><a href="" id="logo__container__logo">chinaza</a></div>
                 <ul>
                     <li class="navItem" ><a href=""><span id="active"></span> Home</a></li>
                     <li class="navItem"><a href=""><span></span>About</a></li>
@@ -252,12 +252,18 @@
         <h1 id="section6__Portfolio">Portfolio</h1>
         <p id="section6__work">Most recent work</p>
             <div id="section6__container">
-                <span id="section6__container__span1" onclick="plusslide(-1)"></span>
-                <span id="section6__container__span2" onclick="plusslide(1)"></span>
+                <span id="section6__container__span1" class="section6__container__class" onclick="plusslide(-1)">
+                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                </span>
+                <span id="section6__container__span2" class="section6__container__class" onclick="plusslide(1)">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </span>
                 <div class="section6__container__dot">
+
                     <span onclick="currentslide(1)"></span>
                     <span onclick="currentslide(2)"></span>
                     <span onclick="currentslide(3)"></span>
+
                 </div>
                 <ul  id="section6__container__slides">
 
@@ -305,7 +311,98 @@
                     </li>
                 </ul>
             </div>
-      </div>
+        </div>
+        <div id="section7">
+            <ul id="section7__container">
+                <li>
+                    <h3>You have a new project</h3>
+                    <p>contact me now and get a 30% discount on your new project</p>
+                    <div id="section7__button">
+                            <a href="">contact me</a>
+                    </div>
+                </li>
+                <li>
+                    <div id="section7__container">
+                        <img src="static/images/work.svg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="section8">
+            <ul id="section8__container">
+                <li id="section8__container__1">
+                    <ul id="section8__container__1__container">
+                        <li class="section8__container__1__container__li">
+                            <ul class="section8__container__1__container__li__container">
+                                <li class="section8__container__1__container__li__container__icon">w</li>
+                                <li>
+                                    <ul>
+                                        <li><h3>call me</h3></li>
+                                        <li><p>08184724615</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="section8__container__1__container__li">
+                            <ul class="section8__container__1__container__li__container">
+                                <li class="section8__container__1__container__li__container__icon">d</li>
+                                <li>
+                                    <ul>
+                                        <li><h3>Email</h3></li>
+                                        <li><p>mosesogbonna68@gamil.com</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="section8__container__1__container__li">
+                            <ul class="section8__container__1__container__li__container">
+                                <li class="section8__container__1__container__li__container__icon">d</li>
+                                <li>
+                                    <ul>
+                                        <li><h3>Location</h3></li>
+                                        <li><p>Nigeria - Enugu</p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="section8__container__2">
+                    <form action="" id="section8__container__2__form">
+
+                        <div> <input type="text" name="" placeholder="name" id=""></div>
+                        <div> <input type="text" name="" placeholder="email adress" id=""></div>
+                        <div> <textarea name="" id="" placeholder="massage......" cols="30" rows="10"></textarea></div>
+                        <div><button id="submitButton">submit</button></div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div id="section9">
+            <ul  id="section9__container">
+                <li  class="section9__container__class">
+                    <ul id="section9__container__class__title">
+                        <li><h2>chinaza</h2></li>
+                        <li><h2>fullstack developer</h2></li>
+                    </ul>
+                </li>
+                <li class="section9__container__class">
+                    <ul id="section9__container__class__nav">
+                        <li>Service</li>
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                    </ul>
+                </li>
+                <li class="section9__container__class">
+                    <ul id="section9__container__class__social">
+                        <li>fa</li>
+                        <li>in</li>
+                        <li>twi</li>
+                    </ul>
+                </li>
+            </ul>
+            <div>chinaza. All right reserved</div>
+        </div>
     </div>
     <script src="/static/home.js"></script>
     
