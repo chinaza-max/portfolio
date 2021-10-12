@@ -3,7 +3,6 @@ const http=require('http');
 const path=require('path');
 const sendMail=require("./mail.js")
 const app=express();
-const socketio=require('socket.io');
 const port=process.env.PORT || 4000;
 const server=http.createServer(app);
 
