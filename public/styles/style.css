@@ -8,10 +8,18 @@ body {
   /* Hide horizontal scrollbar */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #container {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   padding-top: 140px;
+}
+
+.color {
+  background-color: #10043a;
 }
 
 #container__section1 {
@@ -78,7 +86,7 @@ body {
   border-top-right-radius: 12px;
 }
 
-#container__section1 #container__section1__destopNav ul li #active {
+#container__section1 #container__section1__destopNav ul li .active {
   height: 3px;
   width: 100%;
   background-color: #3636a8;
@@ -90,6 +98,10 @@ body {
   color: black;
   width: 100%;
   padding: 5px;
+}
+
+#container__section1 #container__section1__destopNav ul li a:hover {
+  color: #5164d1;
 }
 
 #container__section1 #container__section1__destopNav ul li:hover span {
@@ -198,7 +210,7 @@ body {
 }
 
 #section2 #section2__container #section2__container__text #section2__container__text__container #section2__container__text__container__textContainer h1 {
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 20px;
 }
 
@@ -255,7 +267,7 @@ body {
 #section3 #section3__about {
   overflow-x: hidden;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #section3 #section3_introduction {
@@ -319,6 +331,7 @@ body {
 
 #section3 #section3__container #section3__container__2 #section3__container__2__container li h1 {
   text-align: center;
+  font-size: 35px;
 }
 
 #section3 #section3__container #section3__container__2 #section3__container__2__download {
@@ -361,7 +374,7 @@ body {
 }
 
 #section4 #section4__skill h1 {
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -402,8 +415,17 @@ body {
   height: 70px;
 }
 
+#section4 #section4__container .section4__container__class .section4__container__class__view:hover {
+  cursor: pointer;
+}
+
+#section4 #section4__container .section4__container__class p {
+  font-size: 20px;
+}
+
 #section4 #section4__container .section4__container__class h2 {
   position: relative;
+  font-size: 20px;
 }
 
 #section4 #section4__container .section4__container__class h2 .rotate {
@@ -420,6 +442,10 @@ body {
   border-radius: 50%;
   color: #3636a8;
   font-size: 18px;
+}
+
+#section4 #section4__container .section4__container__class #section4__container__FrontEnd__container h3 {
+  font-size: 20px;
 }
 
 #section4 #section4__container .move {
@@ -584,7 +610,7 @@ body {
 
 #section5 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #section5 #section5__h4 {
@@ -595,7 +621,7 @@ body {
 }
 
 #section5 #section5__container {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   list-style: none;
   display: -webkit-box;
@@ -610,10 +636,177 @@ body {
 }
 
 #section5 #section5__container .section5__container__class {
-  width: 220px;
+  position: relative;
+  width: 230px;
   height: 250px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#section5 #section5__container .section5__container__class .section5D {
+  display: none;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev {
+  display: block;
+  list-style: none;
+  width: 250px;
+  position: absolute;
+  background-color: #f4f4f8;
+  top: 0;
+  left: -15px;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li {
+  padding: 10px;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 li:nth-child(1) {
+  text-align: left;
+  width: 100%;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 li:nth-child(1) h3 {
+  font-size: 20px;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 #section_close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 #section_close:hover {
+  cursor: pointer;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 #section_close span {
+  width: 24px;
+  height: 1;
+  border: 1px solid;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 #section_close span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotateZ(-45deg);
+          transform: translateY(4px) rotateZ(-45deg);
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_1 #section_close span:nth-child(2) {
+  -webkit-transform: translateY(2px) rotateZ(45deg);
+          transform: translateY(2px) rotateZ(45deg);
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_2 {
+  list-style: none;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_2 li {
+  color: #727070;
+}
+
+#section5 #section5__container .section5__container__class .section5Dev li #section5__container__developer__content_2 span .fa {
+  padding-right: 10px;
+}
+
+#section5 #section5__container .section5__container__class .section5E {
+  display: none;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng {
+  display: block;
+  list-style: none;
+  width: 250px;
+  position: absolute;
+  background-color: #f4f4f8;
+  top: 0;
+  left: -15px;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li {
+  padding: 10px;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 li:nth-child(1) {
+  text-align: left;
+  width: 100%;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 li:nth-child(1) h3 {
+  font-size: 20px;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 #section_close2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 #section_close2:hover {
+  cursor: pointer;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 #section_close2 span {
+  width: 24px;
+  height: 1;
+  border: 1px solid;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 #section_close2 span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotateZ(-45deg);
+          transform: translateY(4px) rotateZ(-45deg);
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_1 #section_close2 span:nth-child(2) {
+  -webkit-transform: translateY(2px) rotateZ(45deg);
+          transform: translateY(2px) rotateZ(45deg);
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_2 {
+  list-style: none;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_2 li {
+  color: #727070;
+}
+
+#section5 #section5__container .section5__container__class .section5Eng li #section5__container__engineer__content_2 li span .fa {
+  padding-right: 10px;
 }
 
 #section5 #section5__container .section5__container__class #section5__container__developer__container {
@@ -644,6 +837,11 @@ body {
 #section5 #section5__container .section5__container__class #section5__container__developer__container li:nth-child(1) .fa {
   font-size: 35px;
   color: #3636a8;
+}
+
+#section5 #section5__container .section5__container__class #section5__container__developer__container li:nth-child(3):hover .fa {
+  -webkit-transform: translateX(0.25rem);
+          transform: translateX(0.25rem);
 }
 
 #section5 #section5__container .section5__container__class #section5__container__engineer__container {
@@ -680,6 +878,11 @@ body {
   margin-top: 30px;
 }
 
+#section5 #section5__container .section5__container__class #section5__container__engineer__container li:nth-child(3):hover .fa {
+  -webkit-transform: translateX(0.25rem);
+          transform: translateX(0.25rem);
+}
+
 #section6 {
   width: 100%;
   padding-bottom: 40px;
@@ -688,12 +891,14 @@ body {
 
 #section6 #section6__Portfolio {
   text-align: center;
+  font-size: 35px;
 }
 
 #section6 #section6__work {
   text-align: center;
   color: #727070;
   margin-top: 10px;
+  font-size: 20px;
 }
 
 #section6 #section6__container {
@@ -737,6 +942,10 @@ body {
   color: #3636a8;
 }
 
+#section6 #section6__container #section6__container__span2 .fa:active {
+  color: #6161ec;
+}
+
 #section6 #section6__container .section6__container__dot {
   position: absolute;
   bottom: 1%;
@@ -746,8 +955,8 @@ body {
 }
 
 #section6 #section6__container .section6__container__dot span {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 100px;
   margin: 0 6px;
   background-color: #fff;
@@ -809,6 +1018,10 @@ body {
 
 #section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass .section6__container__slides__class__container__class {
   width: 330px;
+}
+
+#section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass .section6__container__slides__class__container__class h3 {
+  font-size: 20px;
 }
 
 #section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass .section6__container__slides__class__container__class img {
@@ -985,6 +1198,10 @@ body {
   padding-top: 10px;
 }
 
+#section8 #section8__container #section8__container__1 #section8__container__1__container .section8__container__1__container__li .section8__container__1__container__li__container .section8__container__1__container__li__container__icon a .fa {
+  font-size: 20px;
+}
+
 #section8 #section8__container #section8__container__1 #section8__container__1__container .section8__container__1__container__li .section8__container__1__container__li__container li ul {
   list-style: none;
   -webkit-box-orient: vertical;
@@ -994,7 +1211,12 @@ body {
   margin-left: 10px;
 }
 
+#section8 #section8__container #section8__container__1 #section8__container__1__container .section8__container__1__container__li .section8__container__1__container__li__container li ul li h3 {
+  font-size: 20px;
+}
+
 #section8 #section8__container #section8__container__1 #section8__container__1__container .section8__container__1__container__li .section8__container__1__container__li__container li ul li p {
+  font-size: 20px;
   padding-top: 5px;
   color: #b8b3b3;
 }
@@ -1024,6 +1246,10 @@ body {
   height: 120px;
   font-size: 18px;
   padding-bottom: 10px;
+}
+
+#section8 #section8__container #section8__container__2 #section8__container__2__form div textarea:focus {
+  outline: none;
 }
 
 #section8 #section8__container #section8__container__2 #section8__container__2__form div input:focus {
@@ -1089,6 +1315,10 @@ body {
   color: white;
 }
 
+#section9 #section9__container .section9__container__class #section9__container__class__title h2 {
+  font-size: 20px;
+}
+
 #section9 #section9__container .section9__container__class #section9__container__class__nav {
   list-style: none;
   display: -webkit-box;
@@ -1100,6 +1330,16 @@ body {
   color: white;
 }
 
+#section9 #section9__container .section9__container__class #section9__container__class__nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+#section9 #section9__container .section9__container__class #section9__container__class__nav li a:hover {
+  cursor: pointer;
+  color: #6161ec;
+}
+
 #section9 #section9__container .section9__container__class #section9__container__class__social {
   list-style: none;
   width: 100px;
@@ -1109,6 +1349,18 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   color: white;
+}
+
+#section9 #section9__container .section9__container__class #section9__container__class__social li a {
+  text-decoration: none;
+}
+
+#section9 #section9__container .section9__container__class #section9__container__class__social li a .fa {
+  color: white;
+}
+
+#section9 #section9__container .section9__container__class #section9__container__class__social li a .fa:hover {
+  color: #c6c6cf;
 }
 
 #section9 div {
@@ -1126,6 +1378,9 @@ body {
   #container {
     height: 100%;
   }
+  #container__section1 {
+    height: 0;
+  }
   #container__section1__destopNav {
     display: none;
   }
@@ -1136,14 +1391,12 @@ body {
     left: 0;
     width: 100%;
     height: 65px;
-    -webkit-box-shadow: 0px 4px 20px #bdbcbc;
-            box-shadow: 0px 4px 20px #bdbcbc;
     z-index: 6;
   }
   #container__section1__mobilepNav #container__section1__mobilepNav__container {
     height: 60px;
-    -webkit-box-shadow: 0px 4px 20px #bdbcbc;
-            box-shadow: 0px 4px 20px #bdbcbc;
+    -webkit-box-shadow: 0px 4px 5px #bdbcbc;
+            box-shadow: 0px 4px 5px #bdbcbc;
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1186,14 +1439,13 @@ body {
         justify-content: space-around;
     width: 100px;
   }
-  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 #menu_content {
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .menu_content {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 0%;
@@ -1208,13 +1460,10 @@ body {
     width: 100%;
     display: none;
   }
-  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 #menu_content :nth-child(2) {
-    text-align: left;
-  }
-  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 #menu_content .navItem a {
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .menu_content .navItem a {
     text-decoration: none;
   }
-  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 #menu:hover + #menu_content {
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .active {
     height: 9rem;
     width: 100%;
     display: block;
@@ -1223,6 +1472,34 @@ body {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    text-align: center;
+    background-color: white;
+  }
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .menu span {
+    width: 24px;
+    border: 1px solid #3636a8;
+  }
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .activeBar #menu__1 {
+    -webkit-transform: translateY(4px) rotateZ(-45deg);
+            transform: translateY(4px) rotateZ(-45deg);
+  }
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .activeBar #menu__2 {
+    display: none;
+  }
+  #container__section1__mobilepNav #container__section1__mobilepNav__container #container__section1__mobilepNav__container__2 #container__section1__mobilepNav__container__2_1 .activeBar #menu__3 {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
   }
   #section2 {
     margin-top: 0px;
@@ -1230,13 +1507,25 @@ body {
   #section2 #section2__container {
     width: 100%;
   }
+  #section2 #section2__container #section2__container__text #section2__container__text__container #section2__container__text__container__textContainer h1 {
+    font-size: 28px;
+  }
+  #section2 #section2__container #section2__container__text #section2__container__text__container #section2__container__text__container__textContainer h4 {
+    font-size: 18px;
+  }
+  #section2 #section2__container #section2__container__text #section2__container__text__container #section2__container__text__container__textContainer p {
+    font-size: 18px;
+  }
   #section2 #section2__container .section2__container__class .section2__containerImage__containers {
     margin-top: 40px;
     width: 210px;
     height: 210px;
   }
   #section3 #section3__about {
-    font-size: 30px;
+    font-size: 28px;
+  }
+  #section3 #section3_introduction {
+    font-size: 18px;
   }
   #section3 #section3__container {
     width: 100%;
@@ -1254,6 +1543,7 @@ body {
   #section3 #section3__container #section3__container__2 p {
     width: 90%;
     margin: 0 auto;
+    font-size: 18px;
   }
   #section3 #section3__container #section3__container__2 #section3__container__2__container {
     width: 100%;
@@ -1262,19 +1552,68 @@ body {
     margin: 0 auto;
     margin-top: 40px;
   }
+  #section3 #section3__container #section3__container__2 #section3__container__2__container li h1 {
+    font-size: 28px;
+  }
   #section4 #section4__skill h1 {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
   }
+  #section4 #section__skill_level h4 {
+    font-size: 18px;
+  }
   #section4 #section4__container {
-    width: 90%;
+    width: 86%;
     margin: 0 auto;
   }
   #section4 #section4__container .section4__container__class {
     margin-bottom: 40px;
   }
+  #section4 #section4__container .section4__container__class h2 {
+    font-size: 15px;
+  }
+  #section4 #section4__container .section4__container__class p {
+    font-size: 18px;
+  }
+  #section5 h1 {
+    text-align: center;
+    font-size: 28px;
+  }
+  #section5 #section5__h4 {
+    font-size: 18px;
+  }
+  #section5 h4 {
+    font-size: 18px;
+  }
+  #section5 #section5__container .section5__container__class .section5Dev {
+    left: -25px;
+  }
+  #section5 #section5__container .section5__container__class .section5Eng {
+    left: -25px;
+  }
+  #section6 #section6__Portfolio {
+    font-size: 28px;
+  }
+  #section6 #section6__work {
+    font-size: 18px;
+  }
+  #section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass li:nth-child(2) p {
+    font-size: 18px;
+  }
+  #section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass .section6__container__slides__class__container__class h3 {
+    font-size: 18px;
+  }
   #section7 #section7__container {
     width: 90%;
+  }
+  #section7 #section7__container li h3 {
+    font-size: 18px;
+  }
+  #section7 #section7__container li p {
+    font-size: 18px;
+  }
+  #section8 #section8__container #section8__container__1 #section8__container__1__container .section8__container__1__container__li .section8__container__1__container__li__container li ul li h3 {
+    font-size: 18px;
   }
   #section8 #section8__container {
     width: 80%;
@@ -1282,6 +1621,12 @@ body {
   #section9 {
     padding-bottom: 50px;
     margin-top: 0px;
+  }
+  #section9 #section9__container .section9__container__class #section9__container__class__title h2 {
+    font-size: 15px;
+  }
+  #section9 #section9__container #section9__container__class #section9__container__class__nav li a {
+    text-decoration: none;
   }
 }
 
@@ -1318,16 +1663,15 @@ body {
 #section2__container__text__container__textContainer p {
     width: 90%;
   }
-  #section2 #section2__container #section2__container__text #section2__container__text__container
-#section2__container__text__container__textContainer h1 {
-    font-size: 30px;
-  }
   #section2 #section2__container .section2__container__class {
     height: 300px;
   }
+  #section5 .section5__container__class {
+    margin-top: 50px;
+  }
   #section6 #section6__container {
     width: 100%;
-    height: 545px;
+    height: 390px;
   }
   #section6 #section6__container #section6__container__span1 {
     left: 20px;
@@ -1348,7 +1692,7 @@ body {
     text-align: center;
   }
   #section6 #section6__container #section6__container__slides .section6__container__slides__class .section6__container__slides__class__containerClass .section6__container__slides__class__container__class img {
-    width: 80%;
+    width: 50%;
   }
   #section7 #section7__container {
     width: 100%;
