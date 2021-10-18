@@ -34,10 +34,8 @@ function move(){
     if(this.id=="frontend"||this.id=="frontendH2"||this.id=="frontendP"){
         frontend.classList.toggle('move');
         icon1.classList.toggle('rotate');
-      
     }
     else{
-     
         backend.classList.toggle('move'); 
         icon2.classList.toggle('rotate');
     }
