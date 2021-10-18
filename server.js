@@ -25,33 +25,9 @@ app.use(express.json());
 
 
 app.post('/email',(req,res)=>{
-    
-    const {firstname,lastname,email,tel,address,state,city}=req.body;
-    let text1="firstname: "+firstname+";\n"+"lastname: "+lastname+";\n"+"tel: "+tel+";\n"+"address: "+address+";\n"+"state: "+state+";\n"+"city: "+city+";\n"+"email: "+email
-    let text2="package selected"+"\n"+package;
-    let text=text1+"\n"+text2;
-    const subject="Credit repair client registration";
-   
-   sendMail(email,subject,text,(err,data)=>{
-        if(err){
-            res.status(500).json({message:"internal error"})
-        }
-        else{
-            res.json({message:"Email sent"})
-        }
-    })
-
-    res.json({message:'yes'})
-})
-
-app.post('/email2',(req,res)=>{
-    const {firstname,lastname,email,tel,address,state,city,}=req.body;
-    const {firstname2,lastname2,email2,tel2,address2,state2,city2,}=req.body;
-    let text1="firstname: "+firstname+";\n"+"lastname: "+lastname+";\n"+"tel: "+tel+";\n"+"address: "+address+";\n"+"state: "+state+";\n"+"city: "+city+";\n"+"email: "+email
-    let text3="firstname: "+firstname2+";\n"+"lastname: "+lastname2+";\n"+"tel: "+tel2+";\n"+"address: "+address2+";\n"+"state: "+state2+";\n"+"city: "+city2+";\n"+"email: "+email2
-    let text2="package selected"+"\n"+package;
-    let text=text1+"\n"+"\n"+text3+"\n"+text2;
-    const subject="Credit repair client registration";
+    const {fullname,email,message}=req.body;
+    let text=fullname+"\n"+"\n"+message;
+    const subject="from my portfolio";
    
    sendMail(email,subject,text,(err,data)=>{
         if(err){

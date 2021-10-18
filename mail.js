@@ -21,7 +21,7 @@ const transporter=nodemailer.createTransport({
 const sendMail=(email,subject,text,cb)=>{
     const mailOptions={
         from:email,
-        to:"Breakthroughcredit.bcr@gmail.com",
+        to:"brightmind.lmt@gmail.com",
         subject,
         text
     }
@@ -34,6 +34,7 @@ const sendMail=(email,subject,text,cb)=>{
                 cb(null,data)
             }
     });
+    process.env.EMAIL
 }
 
 module.exports=sendMail;

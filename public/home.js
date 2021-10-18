@@ -5,6 +5,21 @@ let icon1=document.getElementById("frontend")
 let icon2=document.getElementById("backend")
 let container=document.getElementById("container")
 let selected_nav=document.querySelectorAll('.selected_nav')
+let dotContainer=document.querySelector(".section6__container__dot")
+let direction=document.querySelectorAll(".fa-angle-double-right")
+let slider=document.getElementById("section6__container__slides")
+let slides=document.getElementById("section6__container__slides")
+let slide=document.querySelectorAll(".section6__container__slides__class");
+let dots=document.querySelectorAll(".section6__container__dot span");
+let slideIndex=0;
+
+
+
+
+
+
+
+
 
 
 scrollView.forEach(element => {
@@ -15,12 +30,14 @@ scrollView.forEach(element => {
 window.onscroll = function() {scrollFunction()}
 
 function move(){
-
+    
     if(this.id=="frontend"||this.id=="frontendH2"||this.id=="frontendP"){
         frontend.classList.toggle('move');
         icon1.classList.toggle('rotate');
+      
     }
     else{
+     
         backend.classList.toggle('move'); 
         icon2.classList.toggle('rotate');
     }
@@ -29,15 +46,10 @@ function move(){
 
 
 
-let slideIndex=0;
-let slider=document.getElementById("section6__container__slides")
-let slides=document.getElementById("section6__container__slides")
-let slide=document.querySelectorAll(".section6__container__slides__class");
-let dots=document.querySelectorAll(".section6__container__dot span");
 
 function plusslide(position){
       slideIndex+=position
-      console.log(position)
+
     if(slideIndex>slide.length){
         slideIndex=1;
     }
@@ -84,7 +96,7 @@ function showslide(){
     slideIndex++;
  if(slideIndex>slide.length){
       slideIndex=1; 
-      //console.log(slide.length)
+
   }
   else if(slideIndex<1){  
       slideIndex=slide.length
@@ -101,13 +113,33 @@ function showslide(){
 }
 
 
-//change image after every 3sec
+
 let interval=window.setInterval(()=>{
     showslide()
-},5000)
-
+},6000)
+/*
+direction.forEach((ele)=>{
+    ele.addEventListener("mouseover",()=>{
+        window.clearInterval(interval)
+    })
+    ele.addEventListener("mouseout",()=>{
+        interval=window.setInterval(()=>{
+            showslide();
+        },6000)
+    })
+})
+dots.forEach((ele)=>{
+    ele.addEventListener("mouseover",()=>{
+        window.clearInterval(interval)
+    })
+    ele.addEventListener("mouseout",()=>{
+        interval=window.setInterval(()=>{
+            showslide();
+        },6000)
+    })
+})
+*/
 //onHover stop changing every image after every 3sec
-
 slider.addEventListener("mouseover",()=>{
     window.clearInterval(interval)
 })
@@ -119,11 +151,20 @@ slider.addEventListener("mouseout",()=>{
     },5000)
 })
 
+dotContainer.addEventListener("mouseover",()=>{
+    window.clearInterval(interval)
+})
+
+dotContainer.addEventListener("mouseout",()=>{
+    interval=window.setInterval(()=>{
+        showslide();
+    },5000)
+})
 
 //this handles navbar on desktop
 
 function scrollFunction() {
-        console.log( document.documentElement.scrollTop )
+    
     if (document.body.scrollTop > 50 ||  document.documentElement.scrollTop > 50) {
         document.getElementById("container__section1").style.boxShadow= "2px 1px rgb(218, 214, 214)"
         document.getElementById("container__section1").style.backgroundColor="rgb(248, 248, 248)"
@@ -188,3 +229,30 @@ function viewDetail2(){
     let moreDetails=document.getElementById("section5__container__engineer__content")
     moreDetails.classList.toggle('section5Eng');
 }
+
+
+//this handles the massage sent;
+$('form').on('submit',(e)=>{
+    e.preventDefault();
+
+    const fullname=$("#fullname").val().trim();
+    const email=$("#email").val().trim();
+    const message=$("#message").val().trim();
+
+    const data={
+        fullname,
+        email,
+        message,
+    };
+
+    $.post('/email',data,(req,res)=>{
+
+        if(res=="success"){
+            swal("Submitted", "You would be contacted for further processing", "success");
+        }
+       
+    });
+    $("#fullname").val('')
+    $("#email").val('')
+    $("#message").val('')
+})
