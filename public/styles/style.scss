@@ -8,13 +8,20 @@ $minwidth:290px;
 $h1FontSize:35px;
 $h4FontSize:20px;
 $h3FontSize:20px;
-$paragraph:20px;
+$h3FontSize2:15px;
+$paragraph:19px;
 $h2FontSize:20px;
 $paragraphMobile:18px;
 $h1FontSizeMobile:28px;
 $h4FontSizeMobile:18px;
 $h2FontSizeMobile:15px;
 $h3FontSizeMobile:18px;
+$fonFamilyPara:'Amiri', serif;
+$fonFamilyParaH1:'Lora', serif;
+$Logo:'Kaushan Script', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @mixin skillFlex{
     display: flex;
     justify-content: space-between;
@@ -150,6 +157,7 @@ html {
                 text-decoration: none;
                 color: $navcolor;
                 font-size:25px;
+                font-family:$Logo;
             }
         }
         ul{
@@ -167,6 +175,7 @@ html {
             li{
                 position: relative;
                 padding: 9px;
+                font-family: $fonFamilyParaH1;
                 span{
                     position: absolute;
                     bottom: 0;
@@ -275,17 +284,20 @@ html {
                 h1{
                     font-size: $h1FontSize;
                     margin-top: 20px;
+                    font-family: $fonFamilyParaH1;
                 }
                 h4{
                     color: $fadeAsh;
                     font-size: 23px;
                     margin-top: 15px;
+                    font-family: $fonFamilyParaH1;
                 }
                 p{
                     color: $fadeAsh;
                     margin-top: 15px;
                     width: 330px;
                     font-size:$paragraph;
+                    font-family: $fonFamilyPara;
                 }
                 #section2__container__text__container__textContainer__container{
                    @include button()
@@ -305,12 +317,14 @@ html {
         overflow-x: hidden;
         text-align: center;
         font-size: $h1FontSize;
+        font-family: $fonFamilyParaH1;
     }
     #section3_introduction{
         text-align: center;
         color:$fadeAsh;
         font-size: $h4FontSize;
         margin-top: 20px;
+        font-family: $fonFamilyParaH1;
     }
     #section3__container{
         display: flex;
@@ -336,6 +350,7 @@ html {
                 width: 70%;
                 color: $fadeAsh;
                 font-size: $paragraph;
+                font-family: $fonFamilyPara;
                 text-align: left;
             }
             ul li p{
@@ -378,12 +393,14 @@ html {
         h1{
             font-size: $h1FontSize;
             text-align: center;
+            font-family: $fonFamilyParaH1;
         }
     }
     #section__skill_level{
         margin-top: 20px;
         margin-bottom: 50px;
         h4{
+            font-family: $fonFamilyParaH1;
             font-size: $h4FontSize;
             text-align: center;
             color:$fadeAsh;
@@ -412,7 +429,7 @@ html {
             h2{
                 position: relative;
                 font-size:$h4FontSize ;
-                
+                font-family: $fonFamilyParaH1;
                 .rotate{
                     transform: rotate(180deg);
                 }
@@ -430,6 +447,7 @@ html {
             #section4__container__FrontEnd__container{
                 h3{
                     font-size: $h3FontSize;
+                    font-family: $fonFamilyParaH1;
                 }
             }
         }
@@ -515,13 +533,14 @@ html {
     h1{
         text-align: center;
         font-size:$h1FontSize ;
+        font-family: $fonFamilyParaH1;
     }
     #section5__h4{
         text-align: center;
         color:$fadeAsh ;
         margin-top: 20px;
         font-size:$h4FontSize ;
-    
+        font-family: $fonFamilyParaH1;
     }
     #section5__container{
         width: 65%;
@@ -558,7 +577,8 @@ html {
                             text-align: left;
                             width: 100%;
                             h3{
-                                font-size: $h3FontSize;
+                                font-family: $fonFamilyParaH1;
+                                font-size: $h3FontSize2;
                             }
                         }
                         
@@ -615,7 +635,8 @@ html {
                             text-align: left;
                             width: 100%;
                             h3{
-                                font-size: $h3FontSize;
+                                font-size: $h3FontSize2;
+                                font-family: $fonFamilyParaH1;
                             }
                         }
                         
@@ -642,6 +663,7 @@ html {
                     #section5__container__engineer__content_2{
                         list-style: none;
                         li{
+                            font-family:$fonFamilyPara;
                             color: $fadeAsh;
                             span .fa{
                                 padding-right: 10px
@@ -663,12 +685,9 @@ html {
                    margin-top: 30px;
                 }
                 li:nth-child(3):hover .fa{
-            
                     transform: translateX(.25rem);
                 }
             }
-            
-
         }
     }
 }
@@ -679,12 +698,14 @@ html {
     #section6__Portfolio{
         text-align: center;
         font-size: $h1FontSize;
+        font-family: $fonFamilyParaH1;
     }
     #section6__work{
         text-align: center;
         color:$fadeAsh ;
         margin-top: 10px;
         font-size: $h4FontSize;
+        font-family: $fonFamilyParaH1;
     }
     #section6__container{
         width:70%;
@@ -787,7 +808,8 @@ html {
                         p{
                             margin-top: 10px;
                             color: $fadeAsh2;
-                            font-size: $paragraph
+                            font-size: $paragraph;
+                            font-family: $fonFamilyPara;
                         }
                         div{
                             @include button();
@@ -812,13 +834,14 @@ html {
         border-bottom-right-radius: 60px;
         background-color:$maincolour ;
         li:nth-child(1){
-            padding-top: 50px;
+            padding-top: 40px;
         }
         li{
             flex: 1;
             h3{
                 text-align: center;
                 font-size: 25px;
+                font-family: $fonFamilyParaH1;
             }
             p{
                 color: rgb(184, 183, 183);
@@ -826,7 +849,8 @@ html {
                 width: 90%;
                 margin: 0 auto;
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 15px;
+                font-family: $fonFamilyPara;
             }
             #section7__button{
                 width: 100px;
@@ -877,11 +901,13 @@ html {
                         li{
                             h3{
                                 font-size: $h3FontSize;
+                                font-family: $fonFamilyParaH1;
                             }
                             p{  
                                 font-size: $paragraph;
                                 padding-top: 5px;
                                 color: rgb(184, 179, 179);
+                                font-family: $fonFamilyParaH1;
                             }
                         }
                     }
@@ -931,6 +957,7 @@ html {
                         height: 30px;
                         border: 1px solid $maincolour;
                         background-color: rgb(175, 201, 224);
+                        font-family: $fonFamilyParaH1;
                     }
                     #submitButton:focus{
                         outline: none;
@@ -964,6 +991,7 @@ html {
                 color: white;
                 h2{
                     font-size: $h2FontSize;
+                    font-family: $fonFamilyParaH1;
                 }
             }
             #section9__container__class__nav{
@@ -975,6 +1003,7 @@ html {
                 li a{
                     text-decoration: none;
                      color: white;
+                     font-family: $fonFamilyParaH1;
                 }
                 li a:hover{
                     cursor: pointer;
@@ -1005,6 +1034,7 @@ html {
         p{
             font-size: $paragraph;
             color: rgb(58, 57, 57);
+            font-family: $fonFamilyParaH1;
         }
     }
 
@@ -1060,6 +1090,7 @@ html {
                 text-decoration: none;
                 font-size:20px;
                 padding-left: 20px;
+                font-family:$Logo;
             }
             #container__section1__mobilepNav__container__1{
                 text-align: left;
@@ -1092,6 +1123,10 @@ html {
                         display: none;
                         .navItem a{
                             text-decoration: none;
+                        }
+                        .navItem a:hover{
+                            border-bottom: 3px solid $maincolour;
+
                         }
                     }
                     .active{

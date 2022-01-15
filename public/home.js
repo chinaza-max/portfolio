@@ -174,24 +174,60 @@ function scrollFunction() {
     }
 
 
-    if(document.documentElement.scrollTop<=0){
-        selectedNav(0)
+    if(frontend.scrollHeight<400){
+  
+        if(document.documentElement.scrollTop<=400){
+            //home
+            selectedNav(0)
+        }
+        else if(document.documentElement.scrollTop<=1180){
+            //about
+            selectedNav(1)
+        }
+        else if(document.documentElement.scrollTop<=1450){
+            //skill
+            selectedNav(2)
+        }
+        else if(document.documentElement.scrollTop<=1932){
+            //service
+            selectedNav(3)
+        }
+        else if(document.documentElement.scrollTop<=2200){
+            //project
+            selectedNav(4)
+        }
+        else if(document.documentElement.scrollTop>2200){
+            //contact
+            selectedNav(5)
+        }
     }
-    else if(document.documentElement.scrollTop<=540){
-        selectedNav(1)
+    else{
+        if(document.documentElement.scrollTop<=400){
+            //home
+            selectedNav(0)
+        }
+        else if(document.documentElement.scrollTop<=1180){
+            //about
+            selectedNav(1)
+        }
+        else if(document.documentElement.scrollTop<=1600){
+            //skill
+            selectedNav(2)
+        }
+        else if(document.documentElement.scrollTop<=2000){
+            //service
+            selectedNav(3)
+        }
+        else if(document.documentElement.scrollTop<=2700){
+            //project
+            selectedNav(4)
+        }
+        else if(document.documentElement.scrollTop>2700){
+            //contact
+            selectedNav(5)
+        }
     }
-    else if(document.documentElement.scrollTop<=1090.4000244140625){
-        selectedNav(2)
-    }
-    else if(document.documentElement.scrollTop<=1332.800048828125){
-        selectedNav(3)
-    }
-    else if(document.documentElement.scrollTop<=1795.199951171875){
-        selectedNav(4)
-    }
-    else if(document.documentElement.scrollTop<=2227.199951171875){
-        selectedNav(5)
-    }
+  
 }
 
 
